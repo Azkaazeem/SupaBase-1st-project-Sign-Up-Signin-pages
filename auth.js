@@ -2,6 +2,10 @@ import supaBase from "./config.js"
 
 console.log(supaBase);
 
+
+// ==============================================  SIGNUP PAGE =========================================================
+
+
 let regform = document.getElementById('regform');
 let sfullName = document.getElementById('s-full-name');
 let sEmail = document.getElementById('s-email');
@@ -89,3 +93,13 @@ async function SignIn(e) {
 
 lSignin && lSignin.addEventListener("submit", SignIn);
 
+
+// ================================================ Sign Out =========================================================
+
+let logOut = document.getElementById("log-out");
+
+// console.log(logOut);
+
+logOut.addEventListener('click', function () {
+    location.href = "signup.html";
+});

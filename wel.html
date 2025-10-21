@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,6 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    
     body {
       height: 100vh;
       margin: 0;
@@ -21,6 +21,7 @@
       font-family: 'Poppins', sans-serif;
       color: white;
       text-align: center;
+      overflow: hidden;
     }
 
     .welcome-box {
@@ -58,21 +59,51 @@
       transform: scale(1.05);
     }
 
+    #log-out {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+    }
+
+    #log-out:hover {
+      color: rgb(209, 209, 209);
+      transform: scale(1.2);
+    }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
+  <div id="log-out"><i class="fa-solid fa-right-from-bracket"> </i><span> Log Out</span></div>
 
   <div class="welcome-box">
-    <h1>Welcome to My Website 🌟</h1>
+    <h1 id="wel-heading">Welcome to My Website 🌟</h1>
     <p>Explore amazing content and start your journey with us.</p>
     <a href="home.html" class="btn btn-custom">Get Started</a>
   </div>
 
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script type="module" src="config.js"></script>
+  <script type="module" src="auth.js"></script>
 </body>
+
 </html>
